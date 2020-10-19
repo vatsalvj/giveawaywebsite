@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 urlpatterns=[
     path("",views.index,name="index"),
 
-    path("pr/",views.pr,name="pr"),
+    path("pr/<str:item>",views.pr,name="pr"),#added item as parameter
 
     path('login/', auth_views.LoginView.as_view(template_name="login.html")),
 
