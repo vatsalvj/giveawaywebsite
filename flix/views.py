@@ -17,7 +17,7 @@ def logout_view(request):
 
 
 @login_required
-def pr(request,product):
-    ite=Items.objects.get(item=product)
+def pr(request):
+    ite=Items.objects.all()
     context={'ite':ite}
     return render(request,"pr.html",context)
